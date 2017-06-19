@@ -7,7 +7,7 @@ const HTMLPlugin = require('html-webpack-plugin');
 const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const production = process.env.NODE_ENV === 'prodution';
+const production = process.env.NODE_ENV === 'production';
 
 let plugins = [
   new ExtractTextPlugin({filename: 'bundle.css'}),
