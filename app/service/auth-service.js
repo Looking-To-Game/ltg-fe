@@ -16,7 +16,7 @@ module.exports = [
 
       if(!token) return $q.reject(new Error('No Token'));
       $window.localStorage.setItem('token', token);
-      tempToken = token;
+      let tempToken = token;
 
       return $q.resolve(tempToken);
     }
@@ -42,7 +42,7 @@ module.exports = [
         },
       };
 
-      return $http.get(url, config)
+      return $http.get(url, user, config)
         .then(res => {
           // $log.log('sucess', res.data);
           return setToken(res.data);
@@ -73,7 +73,7 @@ module.exports = [
         .catch(err => {
           $log.error('failure', err.message);
           return $q.reject(err);
-        })
+        });
     };
 
     service.logout = function(){
