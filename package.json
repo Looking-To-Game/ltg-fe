@@ -1,0 +1,35 @@
+{
+  "name": "ltg-fe",
+  "version": "0.1.0",
+  "description": "Looking to game Front-End",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "karma",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Looking-To-Game/ltg-fe.git"
+  },
+  "author": "Ben Ayzberg, Caleb Wells, Michael Padget, David Teddy, Scott Brenden",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Looking-To-Game/ltg-fe/issues"
+  },
+  "homepage": "https://github.com/Looking-To-Game/ltg-fe#readme",
+  "devDependencies": {
+    "angular-mocks": "^1.6.4",
+    "babel-polyfill": "^6.23.0",
+    "chai": "^4.0.2",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.3",
+    "karma-webpack": "^2.0.3",
+    "mocha": "^3.4.2",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
