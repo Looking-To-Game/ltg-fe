@@ -2,9 +2,9 @@
   "name": "ltg-fe",
   "version": "0.1.0",
   "description": "Looking to game front end",
-  "main": "server.js",
-  "directories": {
-    "test": "test"
+  "main": "karma.conf.js",
+  "engines": {
+    "node": "4.4.7"
   },
   "scripts": {
     "start": "node server.js",
