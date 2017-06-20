@@ -6,8 +6,8 @@ module.exports = [
   '$window',
   '$location',
   'authService',
-  'feedService',
-  function($log, $rootScope, $window, $location, authService, feedService){
+  // 'feedService',
+  function($log, $rootScope, $window, $location, authService){
     this.$onInit = () => {
       $log.debug('#HomeController()');
 
