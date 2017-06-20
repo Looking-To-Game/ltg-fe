@@ -1,28 +1,17 @@
 <section>
-  <div class="join-container"
-    ng-if="landingCtrl.showSignup">
+  <div class="join-container" ng-if="landingCtrl.showSignup">
     <div class="join-inner">
       <signup-controller></signup-controller>
-      <p>already a member?
-        <a href="/#!/login"
-          ng-click="landingCtrl.showSignup=false">
-          sign in here!
-        </a>
-      </p>
+      <p>already a mamber?</p>
+      <a href="/#!/login" ng-click="landingCtrl.showSignup=false">Login</a>
     </div>
+  </div>
 
-    <div class="join-container"
-      ng-if="!landingCtrl.showSignup">
-      <div class="join-inner">
-        <login-controller></login-controller>
-        <p>want to sign up?
-          <a href="/#!/signup"
-            ng-click="landingCtrl.showSignup=true">
-            sign up here!
-          </a>
-        </p>
-      </div>
+  <div class="join-container" ng-if="!landingCtrl.showSignup">
+    <div class="join-inner">
+      <login-controller></login-controller>
+      <p>New to LtG?</p>
+      <a href="/#!/signup" ng-click="landingCtrl.showSignup=true">Signup</a>
     </div>
-
   </div>
 </section>
