@@ -18,10 +18,11 @@ module.exports = ['$stateProvider', '$urlServiceProvider', function($stateProvid
       name: 'landing',
       url: '/join',
       controller: 'LandingController',
-      controllerAs: 'landingCtrl'
+      controllerAs: 'landingCtrl',
     },
     {
 
     },
   ];
+  routes.forEach($stateProvider.state);
 }];
