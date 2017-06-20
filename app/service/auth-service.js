@@ -42,9 +42,9 @@ module.exports = [
         },
       };
 
-      return $http.get(url, user, config)
+      return $http.post(url, user, config)
         .then(res => {
-          // $log.log('sucess', res.data);
+          $log.log('sucess', res.data);
           return setToken(res.data);
         })
         .catch(err => {
