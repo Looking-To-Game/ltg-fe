@@ -7,7 +7,7 @@ module.exports = [
     this.$onInit = () => {
 
       let url = $location.url();
-      this.showSignup = url === '/posts';
-    
+      this.showCreatePost = url === '/post#create' || url === '/post';
+
     };
   }];

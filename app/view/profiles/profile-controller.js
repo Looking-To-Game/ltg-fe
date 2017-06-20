@@ -8,6 +8,6 @@ module.exports = [
       this.title = 'Profile';
 
       let url = $location.url();
-      this.showSignup = url === '/profile#view' || url === '/profile';
+      this.editProfile = url === '/join#editProfile';
     };
   }];

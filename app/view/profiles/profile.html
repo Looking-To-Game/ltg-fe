@@ -1,3 +1,11 @@
 <section>
+  <div class="join-container" ng-if="profileCtrl.editProfile">
+    <edit-user></edit-user>
+    <a href="/#!/profile" ng-click="profileCtrl.editProfile=false">Save Changes</a>
+  </div>
   
+  <div class="join-container" ng-if="!profileCtrl.editProfile">
+    <view-profile></view-profile>
+    <a href="/#!/editProfile" ng-click="profileCtrl.editProfile=true">Edit</a>
+  </div>
 </section>
