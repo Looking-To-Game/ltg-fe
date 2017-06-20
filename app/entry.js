@@ -12,7 +12,8 @@ require('@uirouter/angularjs');
 const ltg = angular.module('ltg', ['ui.router']);
 
 let context = require.context('./config/', true, /\.js$/);
-context.keys.forEach(path => ltg.config(context(path)));
+
+context.keys().forEach(path => ltg.config(context(path)));
 
 context = require.context('./view/', true, /\.js$/);
 context.keys().forEach(key => ltg.controller(pascalcase(path.basename(key, '.js')), context(key)));
