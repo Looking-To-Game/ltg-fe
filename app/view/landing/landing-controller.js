@@ -4,7 +4,7 @@ module.exports = [
   '$log',
   '$location',
   'authService',
-  function($log, $location, authservice){
+  function($log, $location /*, authservice*/){
     this.$onInit = () => {
       this.title = 'Please sign in!';
 
