@@ -21,7 +21,10 @@ module.exports = ['$stateProvider', '$urlServiceProvider', function($stateProvid
       controllerAs: 'landingCtrl',
     },
     {
-
+      name: 'profile',
+      url: '/profile',
+      controller: 'ProfileController',
+      controllerAs: 'ProfileCtrl',
     },
   ];
   routes.forEach($stateProvider.state);
