@@ -1,6 +1,7 @@
 <section>
   <form name="editPostForm"
-    ng-submit="editPostCtrl.updatePost()">
+    ng-submit="editPostCtrl.updatePost()"
+    ng-if="editPostCtrl.showEditPost">
     <fieldset>
       <label for="title">Title</label>
       <input type="text" name="title" ng-model="editPostCtrl.post.title">
@@ -73,7 +74,8 @@
         placeholder="ex. 6/17/17 3pm"
         ng-model="createPostCtrl.post.endTime">
     </fieldset>
-
-    <button type="submit">Submit</button>
+    <!-- <button type="submit">Submit</button> -->
+    <button type="submit" ng-if="editPostCtrl.showEditPost"
+      ng-click="editPostCtrl.showEditPost = false">Submit</button>
   </form>
 </section>

@@ -9,6 +9,7 @@ module.exports = {
   controller: ['$log', 'postService', function($log, postService){
     this.$onInit = () => {
       $log.debug('#editPostCtrl');
+      this.showEditPost = true;
       this.updatePost = () => {
         postService.updatePost(this.post.id, this.post)
           .then(() => $log.log('Edit successful'), err => $log.error(err));
