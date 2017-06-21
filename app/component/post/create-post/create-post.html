@@ -1,5 +1,5 @@
 <section>
-  <form class="createPostForm" ng-submit="createPostCtrl.createPost()">
+  <form class="createPostForm" ng-submit="createPostCtrl.createPost()" ng-if="!createPostCtrl.showEditPost">
     <fieldset>
       <label for="title">Title</label>
       <input

@@ -50,7 +50,7 @@ module.exports = [
               Authorization: `Bearer ${token}`,
             },
           };
-          return $http.get(`${__API_URL__}/api/post`, config);
+          return $http.get(`${__API_URL__}/api/feed`, config);
         })
         .then(res => {
           $log.log('#posts retrieved');
@@ -63,12 +63,12 @@ module.exports = [
         });
     };
 
-    service.updatePost = (postId, post) => {
+    service.updatePost = (groupId, post) => {
       $log.debug('#postservice.updatePost');
 
       return authService.getToken()
         .then(token => {
-          let url = `${__API_URL__}/api/post/${postId}`;
+          let url = `${__API_URL__}/api/group/${groupId}`;
           let config = {
             headers: {
               Accept: 'application/json',
@@ -90,7 +90,7 @@ module.exports = [
         });
     };
 
-    service.deletePost = (postId) => {
+    service.deletePost = (groupId) => {
       $log.debug('#postservice.deletePost()');
 
       return authService.getToken()
@@ -101,7 +101,7 @@ module.exports = [
               Authorization: `Bearer ${token}`,
             },
           };
-          return $http.delete(`${__API_URL__}/api/post/${postId}`);
+          return $http.delete(`${__API_URL__}/api/group/${groupId}`);
         })
         .then(() => {
           service.posts.forEach((ele, index) => {
