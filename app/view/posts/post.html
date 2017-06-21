@@ -1,4 +1,11 @@
 <section>
+  <create-post-controller></create-post-controller>
+  <div class="postview-container"
+    ng-if="postCtrl.showPostEdit">
+    <div class="postview-inner">
+    </div>
+  </div>
+
   <div class="postview-container"
     ng-if="postCtrl.showCreatePost">
     <div class="postview-inner">

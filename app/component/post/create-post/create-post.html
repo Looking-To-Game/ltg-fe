@@ -1,0 +1,88 @@
+<section>
+  <form class="createPostForm" ng-submit="createPostCtrl.createPost()">
+    <fieldset>
+      <label for="title">Title</label>
+      <input
+        type="text"
+        name="title"
+        placeholder="20 character limit"
+        ng-maxlength="20"
+        ng-model="createPostCtrl.post.title"
+        required>
+    </fieldset>
+    <fieldset>
+      <label for="desc">Description</label>
+      <input
+        type="text"
+        name="desc"
+        placeholder="250 character limit"
+        ng-maxlength="250"
+        ng-model="createPostCtrl.post.description">
+    </fieldset>
+    <fieldset>
+      <label for="players">Players Needed</label>
+      <input
+        type="number"
+        name="players"
+        ng-maxlength="2"
+        ng-model="createPostCtrl.post.groupSize"
+        required>
+    </fieldset>
+    <fieldset>
+      <label for="game">Game</label>
+      <select class="postselect" name="game" ng-model="createPostCtrl.post.game" required>
+        <option value="lol">League of Legends</option>
+        <option value="overwatch">Overwatch</option>
+        <option value="destiny">Destiny</option>
+        <option value="halo5">Halo 5</option>
+        <option value="hots">Heroes of the Storm</option>
+        <option value="cod">Call of Duty</option>
+        <option value="dota2">Dota 2</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <label for="platform">Platform</label>
+      <select class="postselect" name="platform" ng-model="createPostCtrl.post.platform" required>
+        <option value="xbox">X-box</option>
+        <option value="playstation">PlayStation</option>
+        <option value="steam">Steam</option>
+        <option value="blizzard">Blizzard</option>
+        <option value="riot">Riot</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <label for="skill">Skill Level</label>
+      <input
+        type="text"
+        name="skill"
+        ng-model="createPostCtrl.post.skillLevel">
+    </fieldset>
+    <fieldset>
+      <label for="dedication">Casual/Competitive</label>
+      <input
+        type="text"
+        name="dedication"
+        ng-model="createPostCtrl.post.dedication">
+    </fieldset>
+    <fieldset>
+      <label for="stime">Start Time</label>
+      <input
+        type="text"
+        name="stime"
+        placeholder="ex. 6/17/17 3pm"
+        ng-model="createPostCtrl.post.startTime"
+        required>
+    </fieldset>
+    <fieldset>
+      <label for="etime">End Time</label>
+      <input
+        type="text"
+        name="etime"
+        placeholder="ex. 6/17/17 3pm"
+        ng-model="createPostCtrl.post.endTime"
+        required>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+  </form>
+</section>

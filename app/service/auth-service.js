@@ -57,7 +57,7 @@ module.exports = [
     service.login = function(user){
       $log.debug('#fe-authService.login()');
 
-      let url = `${__API_URL__}/api/login`;
+      let url = `${__API_URL__}/api/signin`;
       let base64 = $window.btoa(`${user.username}:${user.password}`);
       let config = {
         headers: {
