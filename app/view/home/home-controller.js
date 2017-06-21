@@ -6,8 +6,8 @@ module.exports = [
   '$window',
   '$location',
   'authService',
-  // 'feedService',
-  function($log, $rootScope, $window, $location, authService){
+  'feedFilterService',
+  function($log, $rootScope, $window, $location, authService, feedFilterService){
     this.$onInit = () => {
       $log.debug('#HomeController()');
 
@@ -19,11 +19,16 @@ module.exports = [
         );
       }
 
+      // this.post = 'whatever has been selected from a dropdown'
+
       this.title = 'Looking to Game?';
       this.feed = [];
+      this.gameFilters = feedFilterService.supportedGames;
+      this.supportedPlatforms = feedFilterService.supportedPlatforms;
+
 
       this.fetchFeed = () => {
-        return feedService.fetchFeed()
+        return feedFilterService.fetchFeed()
         .then(posts => {
           this.feed = posts;
         })
