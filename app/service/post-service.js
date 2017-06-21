@@ -23,13 +23,14 @@ module.exports = [
               Authorization: `Bearer ${token}`,
             },
           };
-          return $http.post(`${__API_URL__}/api/post`, post, config);
+          return $http.post(`${__API_URL__}/api/create`, post, config);
         })
         .then(res => {
           $log.log('successful post');
 
           let post = res.data;
           service.posts.push(post);
+          console.log(post);
           return post;
         })
         .catch(err => {
