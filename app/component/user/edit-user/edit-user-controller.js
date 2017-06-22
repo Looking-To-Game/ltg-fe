@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports - {
+module.exports = {
   template: require('./edit-user.html'),
   bindings: {
     user: '<',
@@ -18,10 +18,14 @@ module.exports - {
       };
 
       this.updateUser = function() {
-        return userService.updateUser(this.newInfo)
-        .then(user => this.user = user);
+        return userService.updateUser(this.user)
+        .then(user => {
+          this.user = user;
+          this.getUser();
+        });
       };
       this.getUser();
+      $log.log(this.user);
     };
   }],
 };

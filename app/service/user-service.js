@@ -25,7 +25,8 @@ module.exports = [
           return $http.get(url, config);
         })
         .then(res => {
-          let user = res.body;
+          $log.log(res);
+          let user = res.data;
           return user;
         })
         .catch(err => {
@@ -48,10 +49,12 @@ module.exports = [
           },
         };
 
+        $log.log(user);
+
         return $http.put(url, user, config);
       })
       .then(res => {
-        let user = res.body;
+        let user = res.data;
         return user;
       })
       .catch(err => {
