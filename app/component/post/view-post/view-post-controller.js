@@ -4,11 +4,15 @@
 
 module.exports = {
   template: require('./view-post.html'),
-  controllerAs: 'postViewCtrl',
+  controllerAs: 'viewPostCtrl',
   controller: ['$log', 'postService', function($log, postService){
     $log.debug('#view post controller');
 
     this.showEditPost = false;
+    // this.showCreatePost = false;
+
+    
+
   }],
   bindings: {
     post: '<',
