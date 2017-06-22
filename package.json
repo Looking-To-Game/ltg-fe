@@ -2,12 +2,12 @@
   "name": "ltg-fe",
   "version": "0.1.1",
   "description": "Looking to game front end",
-  "main": "karma.conf.js",
+  "main": "server.js",
+  "start": "node server.js",
   "engines": {
     "node": "6.10.0"
   },
   "scripts": {
-    "start": "node server.js",
     "heroku-postbuild": "webpack",
     "build": "webpack",
     "build-watch": "webpack-dev-server --inline --hot",
