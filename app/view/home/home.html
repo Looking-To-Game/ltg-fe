@@ -1,39 +1,37 @@
 <section class="feed-content">
-  <div class="create-group">create group</div>
 
-    <section class="feed-filters">
-        <!-- feed filters -->
-        <select
-          name="game selection"
-          ng-options="post as post.game for post in homeCtrl.feed track by post._id"
-          ng-model="homeCtrl.post">
-        </select>
+  <section class="feed-filters">
+      <!-- feed filters -->
+      <select
+        name="game selection"
+        ng-options="post as post.game for post in homeCtrl.feed track by post._id"
+        ng-model="homeCtrl.post">
+      </select>
 
-        <select
-          name="platform selection"
-          ng-options="post as post.platform for post in homeCtrl.feed track by post._id"
-          ng-model="homeCtrl.post">
-        </select>
+      <select
+        name="platform selection"
+        ng-options="post as post.platform for post in homeCtrl.feed track by post._id"
+        ng-model="homeCtrl.post">
+      </select>
 
-        <select
-          name="skill level selection"
-          ng-options="post as post.skillLevel for post in homeCtrl.feed track by post._id"
-          ng-model="homeCtrl.post">
-        </select>
+      <select
+        name="skill level selection"
+        ng-options="post as post.skillLevel for post in homeCtrl.feed track by post._id"
+        ng-model="homeCtrl.post">
+      </select>
 
-        <select
-          name="dedication selection"
-          ng-options="post as post.dedication for post in homeCtrl.feed track by post._id"
-          ng-model="homeCtrl.post">
-        </select>
+      <select
+        name="dedication selection"
+        ng-options="post as post.dedication for post in homeCtrl.feed track by post._id"
+        ng-model="homeCtrl.post">
+      </select>
 
-        <select
-          name="group size selection"
-          ng-options="post as post.groupSize for post in homeCtrl.feed track by post._id"
-          ng-model="homeCtrl.post">
-        </select>
-    </section>
-
+      <select
+        name="group size selection"
+        ng-options="post as post.groupSize for post in homeCtrl.feed track by post._id"
+        ng-model="homeCtrl.post">
+      </select>
+  </section>
 
   <input
     type="text"

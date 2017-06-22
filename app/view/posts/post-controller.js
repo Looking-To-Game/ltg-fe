@@ -2,8 +2,9 @@
 
 module.exports = [
   '$log',
+  '$rootScope',
   '$location',
-  function($log, $location){
+  function($log, $rootScope, $location){
     this.$onInit = () => {
 
       let url = $location.url();

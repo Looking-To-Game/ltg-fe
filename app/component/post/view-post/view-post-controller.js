@@ -7,27 +7,19 @@ module.exports = {
   controllerAs: 'viewPostCtrl',
   controller: [
     '$log',
+    '$rootScope',
+    '$window',
+    '$location',
     'postService',
-    // 'feedViewCtrl',
-    function($log, postService){
+    function($log, $rootScope, $window, $location, postService){
       this.$onInit = () => {
         $log.debug('#view post controller');
 
-        this.post = {};
+        this.post = JSON.parse($window.localStorage.currentPost);
+
+        // this.post = feedViewCtrl.currentPost;
 
         this.showEditPost = false;
-        // this.showCreatePost = false;
-        //
-        // this.viewPost = function(){
-        //   return postService.viewPost()
-        //   .then(post => {
-        //     this.post = post;
-        //     console.log(this.post);
-        //   });
-        // };
-
-        // $rootScope.$on('locationChangeSuccess', this.viewPost);
-        // feedViewCtrl.viewPost(feedViewCtrl.currentPost);
       };
     }],
   bindings: {
