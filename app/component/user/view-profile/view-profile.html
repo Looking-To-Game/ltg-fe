@@ -1,0 +1,14 @@
+<section>
+  <div ng if="!userViewCtrl.showEditUser">
+    <h1>{{userViewCrtl.user.username}}</h1>
+    <h3>Account Names</h3>
+    <p>X-box Live: {{userViewCtrl.user.xbl}}</p>
+    <p>PlayStation: {{userViewCtrl.user.psn}}</p>
+    <p>Steam: {{userViewCtrl.user.steam}}</p>
+    <p>Battle.Net: {{userViewCtrl.user.battlenet}}</p>
+    <p>League of Legends: {{userViewCtrl.user.leagueOfLegends}}</p>
+  </div>
+
+  <button type="button" ng-if="!userViewCtrl.showEditUser"
+    ng-click="userViewCtrl.showEditUser = true">Edit Profile</button>
+</section>
