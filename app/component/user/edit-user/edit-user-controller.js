@@ -5,10 +5,10 @@ module.exports - {
   bindings: {
     user: '<',
   },
-  controllerAs: 'editProfileCtrl',
+  controllerAs: 'editUserCtrl',
   controller: ['$log', 'userService', function($log, userService) {
     this.$onInit = () => {
-      $log.debug('#editProfileCtrl');
+      $log.debug('#editUserCtrl');
 
       this.user = {};
 
@@ -21,6 +21,7 @@ module.exports - {
         return userService.updateUser(this.newInfo)
         .then(user => this.user = user);
       };
+      this.getUser();
     };
   }],
 };
