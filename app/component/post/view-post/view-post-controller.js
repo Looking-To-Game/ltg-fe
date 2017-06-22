@@ -5,15 +5,23 @@
 module.exports = {
   template: require('./view-post.html'),
   controllerAs: 'viewPostCtrl',
-  controller: ['$log', 'postService', function($log, postService){
-    $log.debug('#view post controller');
+  controller: [
+    '$log',
+    '$rootScope',
+    '$window',
+    '$location',
+    'postService',
+    function($log, $rootScope, $window, $location, postService){
+      this.$onInit = () => {
+        $log.debug('#view post controller');
 
-    this.showEditPost = false;
-    // this.showCreatePost = false;
+        this.post = JSON.parse($window.localStorage.currentPost);
 
-    
+        // this.post = feedViewCtrl.currentPost;
 
-  }],
+        this.showEditPost = false;
+      };
+    }],
   bindings: {
     post: '<',
   },
