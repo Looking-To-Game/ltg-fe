@@ -1,0 +1,37 @@
+//::::VARS:::://
+
+$brand-primary: #b00f0a;
+$brand-secondary: #444;
+$brand-accent: #dc830c;
+$black: #000;
+$white: #fff;
+$small-font: 'Squada One', cursive;
+
+//::::MIXINS:::://
+@mixin txtBtn {
+  font-family: $small-font;
+  color: #fff;
+  font-size: 2vw;
+}
+
+//::::STYLES:::://
+.navbar{
+  background: $brand-secondary;
+}
+
+.navbar-btn {
+  @include txtBtn;
+  width: 33.33%;
+  margin: 0;
+  padding: 1vw 0;
+  text-align: center;
+  display: inline-block;
+  background: $brand-primary;
+  &:hover{
+    background: $brand-accent;
+  }
+  &:active{
+    background: $brand-accent;
+    transform: scale(.9);
+  }
+}

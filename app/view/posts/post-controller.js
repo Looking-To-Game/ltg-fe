@@ -11,5 +11,15 @@ module.exports = [
       this.viewPost = url === '/post#view' || url === '/post';
       this.createPost = url === '/post#create';
       this.editPost = url === '/post#edit';
+
+      this.showEdit = () => {
+        this.editPost=true;
+        this.viewPost=false;
+      };
+
+      this.showView = () => {
+        this.editPost=false;
+        this.viewPost=true;
+      };
     };
   }];
