@@ -10,6 +10,7 @@ module.exports = [
 
     let service = {};
     service.posts = [];
+    service.post = {};
 
     service.createPost = (post) => {
       $log.debug('#service.createpost');
@@ -55,6 +56,20 @@ module.exports = [
           $log.log('#posts retrieved');
           service.posts = res.data;
           return service.posts;
+        })
+        .catch(err => {
+          $log.error(err.message);
+          $q.reject(err);
+        });
+    };
+
+    service.viewPost = (groupId) => {
+      $log.debug('#post service.readPosts');
+      return $http.get(`${__API_URL__}/api/group/${groupId}`)
+        .then(res => {
+          $log.log('#single post retrieved');
+          service.post = res.data;
+          return service.post;
         })
         .catch(err => {
           $log.error(err.message);
