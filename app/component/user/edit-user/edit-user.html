@@ -1,0 +1,29 @@
+<section>
+  <form
+    ng-submit="editProfileCtrl.updateUser()"
+    >
+    <input
+      type="text"
+      value="editProfileCtrl.user.username"
+      placeholder="editProfileCtrl.user.us"
+      ng-minlength="4"
+      ng-model="editProfileCtrl.newInfo.username">
+
+    <input
+      type="text"
+      value="editProfileCtrl.user.email"
+      placeholder="editProfileCtrl.user.email"
+      ng-model="editProfileCtrl.newInfo.email">
+
+    <input
+      type="text"
+      value="editProfileCtrl.user.xbl"
+      placeholder="editProfileCtrl.user.xbl"
+      ng-model="editProfileCtrl.newInfo.xbl">
+
+  </form>
+  <button
+    type="submit"
+    >Update
+</button>
+</section>
