@@ -20,8 +20,8 @@ module.exports = {
         };
 
         this.showEditPost = true;
-        this.editedPost = $window.localStorage.currentPost;
-
+        this.editedPost = JSON.parse($window.localStorage.currentPost);
+        console.log('THE EDITED POST MOTHA FUCKA', this.editedPost);
 
         this.updatePost = () => {
           postService.updatePost(this.post._id, this.post)
