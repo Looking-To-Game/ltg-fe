@@ -4,7 +4,7 @@
     ng-if="editPostCtrl.showEditPost">
     <fieldset>
       <label for="title">Title</label>
-      <input type="text" name="title" ng-model="editPostCtrl.post.title">
+      <input type="text" name="title" ng-model="editPostCtrl.editedPost.title">
     </fieldset>
     <fieldset>
       <label for="desc">Description</label>
@@ -12,7 +12,7 @@
         type="text"
         name="desc"
         ng-maxlength="250"
-        ng-model="editPostCtrl.post.description">
+        ng-model="editPostCtrl.editedPost.description">
     </fieldset>
     <fieldset>
       <label for="players">Players Needed</label>
@@ -20,11 +20,11 @@
         type="number"
         name="players"
         ng-maxlength="2"
-        ng-model="createPostCtrl.post.groupSize">
+        ng-model="createPostCtrl.editedPost.groupSize">
     </fieldset>
     <fieldset>
       <label for="game">Game</label>
-      <select class="postselect" name="game" ng-model="createPostCtrl.post.game">
+      <select class="editedPostselect" name="game" ng-model="createPostCtrl.editedPost.game">
         <option value="lol">League of Legends</option>
         <option value="overwatch">Overwatch</option>
         <option value="destiny">Destiny</option>
@@ -36,7 +36,7 @@
     </fieldset>
     <fieldset>
       <label for="platform">Platform</label>
-      <select class="postselect" name="platform" ng-model="createPostCtrl.post.platform">
+      <select class="editedPostselect" name="platform" ng-model="createPostCtrl.editedPost.platform">
         <option value="xbox">X-box</option>
         <option value="playstation">PlayStation</option>
         <option value="steam">Steam</option>
@@ -49,14 +49,14 @@
       <input
         type="text"
         name="skill"
-        ng-model="createPostCtrl.post.skillLevel">
+        ng-model="createPostCtrl.editedPost.skillLevel">
     </fieldset>
     <fieldset>
       <label for="dedication">Casual/Competitive</label>
       <input
         type="text"
         name="dedication"
-        ng-model="createPostCtrl.post.dedication">
+        ng-model="createPostCtrl.editedPost.dedication">
     </fieldset>
     <fieldset>
       <label for="stime">Start Time</label>
@@ -64,7 +64,7 @@
         type="text"
         name="stime"
         placeholder="ex. 6/17/17 3pm"
-        ng-model="createPostCtrl.post.startTime">
+        ng-model="createPostCtrl.editedPost.startTime">
     </fieldset>
     <fieldset>
       <label for="etime">End Time</label>
@@ -72,12 +72,9 @@
         type="text"
         name="etime"
         placeholder="ex. 6/17/17 3pm"
-        ng-model="createPostCtrl.post.endTime">
+        ng-model="createPostCtrl.editedPost.endTime">
     </fieldset>
-    <!-- <button type="submit">Submit</button> -->
     <button type="submit" ng-if="editPostCtrl.showEditPost"
-      ng-click="editPostCtrl.showEditPost = false">Submit</button>
+    ng-click="editPostCtrl.showEditPost = false">submit</button>
   </form>
 </section>
-
-<a href="/#!/home">go home fucker</a>
