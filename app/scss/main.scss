@@ -5,7 +5,53 @@ $brand-secondary: #444;
 $brand-accent: #dc830c;
 $black: #000;
 $white: #fff;
+$btn-pad: .5% 1%;
+$btn-margin: .5%;
+$title-font: 'Nova Square', cursive;
+$small-font: 'Squada One', cursive;
 
 //::::MIXINS:::://
+@mixin btns{
+  // width: 10%;
+  padding: $btn-pad;
+  background: $brand-primary;
+  border: none;
+  margin: $btn-margin;
+  text-decoration: none;
+  color: #fff;
+  transition: 500ms all;
+}
 
+@mixin txtSmall {
+  font-family: $small-font;
+  color: #fff;
+  font-size: 1vw;
+}
+
+@mixin txtBig {
+  font-family: $title-font;
+  color: $brand-accent;
+  font-size: 3vw;
+}
 //::::STYLES:::://
+body {
+  @include txtSmall;
+  background: $brand-secondary;
+  // background-image: url('');
+}
+
+.title {
+  @include txtBig;
+  background-color: $brand-primary;
+  padding: $btn-pad;
+
+}
+
+a, button{
+  @include btns;
+  @include txtSmall;
+
+  &:hover{
+    background: $brand-accent;
+  }
+}
