@@ -5,7 +5,7 @@ module.exports = [
   '$log',
   '$http',
   '$window',
-  function($q, $log, $http, $window, authService){
+  function($q, $log, $http, $window){
     $log.debug('#fe-authService');
 
     let service = {};
@@ -42,9 +42,9 @@ module.exports = [
         },
       };
 
-      return $http.get(url, user, config)
+      return $http.post(url, user, config)
         .then(res => {
-          // $log.log('sucess', res.data);
+          $log.log('sucess', res.data);
           return setToken(res.data);
         })
         .catch(err => {
@@ -57,7 +57,7 @@ module.exports = [
     service.login = function(user){
       $log.debug('#fe-authService.login()');
 
-      let url = `${__API_URL__}/api/login`;
+      let url = `${__API_URL__}/api/signin`;
       let base64 = $window.btoa(`${user.username}:${user.password}`);
       let config = {
         headers: {

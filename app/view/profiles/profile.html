@@ -1,0 +1,12 @@
+<section>
+  <div class="join-container" ng-if="profileCtrl.editProfile">
+    <edit-user-controller></edit-user-controller>
+    <button ng-click="profileCtrl.editProfile=false">Go back to the view</a>
+  </div>
+
+  <div class="join-container" ng-if="!profileCtrl.editProfile">
+    <view-profile-controller></view-profile-controller>
+    <button type="button" ng-if="!userViewCtrl.showEditUser"
+      ng-click="profileCtrl.editProfile = true">Edit Profile</button>
+  </div>
+</section>

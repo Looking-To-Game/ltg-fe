@@ -3,7 +3,7 @@
 module.exports = {
   template: require('./signup.html'),
   controllerAs: 'signupCtrl',
-  contrller: [
+  controller: [
     '$log',
     '$location',
     '$window',
@@ -11,7 +11,7 @@ module.exports = {
     function($log, $location, $window, authService){
       this.$onInit = () => {
         $log.debug('#signupCtrl');
-        
+
         authService.getToken()
         .then(() => $location.url('/home'));
 

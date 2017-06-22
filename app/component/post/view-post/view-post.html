@@ -1,0 +1,19 @@
+<section>
+  <div ng-if="!viewPostCtrl.showEditPost">
+    <h2> this is the post: {{ viewPostCtrl.post.title }}</h2>
+    <span>Host: {{ viewPostCtrl.post.username }}</span>
+    <span>Players: {{ viewPostCtrl.post.groupSize }}</span>
+    <span>Game: {{ viewPostCtrl.post.game }}</span>
+    <span>Platform: {{ viewPostCtrl.post.platform }}</span>
+    <span>From {{ viewPostCtrl.post.startTime }} until {{ viewPostCtrl.post.endTime }}</span>
+  </div>
+
+  <edit-post-controller ng-if="viewPostCtrl.showEditPost"
+    post="viewPostCtrl.post">
+  </edit-post-controller>
+  <a href="/#!/post#edit"
+    ng-if="!viewPostCtrl.showEditPost"
+    ng-click="viewPostCtrl.showEditPost = true">
+    Edit
+  </a>
+</section>
