@@ -16,10 +16,8 @@ module.exports = {
         $log.debug('#view post controller');
 
         this.post = JSON.parse($window.localStorage.currentPost);
-
-        // this.post = feedViewCtrl.currentPost;
-
-        this.showEditPost = false;
+        this.showViewPost = true;
+        
       };
     }],
   bindings: {

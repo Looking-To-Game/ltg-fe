@@ -1,19 +1,18 @@
 {
   "name": "ltg-fe",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Looking to game front end",
-  "main": "karma.conf.js",
+  "main": "server.js",
+  "start": "node server.js",
   "engines": {
-    "node": "4.4.7"
+    "node": "6.10.0"
   },
   "scripts": {
-    "start": "node server.js",
     "heroku-postbuild": "webpack",
     "build": "webpack",
     "build-watch": "webpack-dev-server --inline --hot",
     "test": "karma start",
     "test-watch": "karma start --auto-watch"
-
   },
   "repository": {
     "type": "git",
@@ -35,6 +34,7 @@
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.4",
     "dotenv": "^4.0.0",
+    "express": "^4.15.3",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
     "html-loader": "^0.4.5",

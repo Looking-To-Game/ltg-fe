@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/Looking-To-Game/ltg-fe.svg?branch=master)](https://travis-ci.org/Looking-To-Game/ltg-fe)
 
 ## Version
-0.1.1
+0.2.0
 
 ## Description
 Looking to game is a service that helps people form groups to play games.
