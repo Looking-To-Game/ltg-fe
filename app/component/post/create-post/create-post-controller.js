@@ -31,7 +31,7 @@ module.exports = {
             })
             .then(
               () => $location.url('/home'),
-              () => $location.url('/post#edit')
+              () => $location.url('/post#create')
             )
             .catch(err => $log.error(err));
         };
