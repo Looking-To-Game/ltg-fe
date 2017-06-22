@@ -1,0 +1,101 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+body {
+  font-family: "Squada One", cursive;
+  color: #fff;
+  font-size: 1vw;
+  background: #444; }
+
+.title {
+  font-family: "Nova Square", cursive;
+  color: #dc830c;
+  font-size: 3vw;
+  background-color: #b00f0a;
+  padding: 0.5% 1%; }
+
+a, button {
+  padding: 0.5% 1%;
+  background: #b00f0a;
+  border: none;
+  margin: 0.5%;
+  text-decoration: none;
+  color: #fff;
+  transition: 500ms all;
+  font-family: "Squada One", cursive;
+  color: #fff;
+  font-size: 1vw; }
+  a:hover, button:hover {
+    background: #dc830c; }
+.navbar {
+  background: #444; }
+
+.navbar-btn {
+  font-family: "Squada One", cursive;
+  color: #fff;
+  font-size: 2vw;
+  width: 33.33%;
+  margin: 0;
+  padding: 1vw 0;
+  text-align: center;
+  display: inline-block;
+  background: #b00f0a; }
+  .navbar-btn:hover {
+    background: #dc830c; }
+  .navbar-btn:active {
+    background: #dc830c;
+    transform: scale(0.9); }
+.page-tit {
+  font-family: "Nova Square", cursive;
+  color: #000;
+  font-size: 2vw;
+  text-align: center;
+  padding: 1% 2%; }
+
+label {
+  display: block;
+  margin: 1% 2%; }
+
+input {
+  display: inline-block;
+  margin: 1% 2%; }
+
+/*# sourceMappingURL=bundle.css.map*/
