@@ -7,8 +7,18 @@ module.exports = {
   },
   controllerAs: 'userViewCtrl',
   controller: ['$log', 'userService', function($log, userService){
-    $log.debug('#userViewCtrl');
+    this.$onInit = () => {
+      $log.debug('#userViewCtrl');
 
-    this.showEditUser = false;
+      this.showEditUser = false;
+      this.user = {};
+
+      this.getUser = function() {
+        return userService.getUser()
+        .then(user => this.user = user);
+      };
+
+      this.getUser();
+    };
   }],
 };

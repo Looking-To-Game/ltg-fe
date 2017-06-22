@@ -5,7 +5,7 @@ module.exports = [
   '$log',
   '$http',
   '$window',
-  function($q, $log, $http, $window, authService){
+  function($q, $log, $http, $window){
     $log.debug('#fe-authService');
 
     let service = {};
