@@ -6,14 +6,17 @@ module.exports = {
   controller: [
     '$log',
     '$rootScope',
+    '$window',
     '$location',
     'postService',
-    function($log, $rootScope, $location, postService){
+    function($log, $rootScope, $window, $location, postService){
       this.$onInit = () => {
         $log.debug('#feedViewCtrl');
 
         this.feed = [];
         this.currentPost = {};
+
+
 
         this.loadFeed = function(){
           return postService.readPosts()
@@ -27,14 +30,14 @@ module.exports = {
         this.viewPost = function(postId){
           return postService.viewPost(postId)
           .then(post => {
-            this.post = post;
-            this.currentPost = post;
-            console.log('LOG SOME SHIT', post._id);
-            console.log('LOG SOME SHIT', post);
-          });
-          // .then(
-          //   () => $location.url('/#!/post#view')
-          // );
+            console.log('post id', post._id);
+            console.log('post object', post);
+            $window.localStorage.removeItem('currentPost');
+            $window.localStorage.setItem('currentPost', JSON.stringify(postService.post));
+          })
+          .then(
+            () => $location.url('/post')
+          );
         };
 
         $rootScope.$on('locationChangeSuccess', this.loadFeed);
