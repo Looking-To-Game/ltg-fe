@@ -7,7 +7,8 @@ module.exports = [
     this.$onInit = () => {
 
       let url = $location.url();
-      this.showCreatePost = url === '/post#create' || url === '/post';
-
+      this.showCreatePost = url === '/post#create';
+      this.showPost = url === '/post#view';
+      this.editPost = url === '/post#edit';
     };
   }];

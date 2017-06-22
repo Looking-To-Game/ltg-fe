@@ -41,17 +41,16 @@ module.exports = [
 
     service.readPosts = () => {
       $log.debug('#post service.readPosts');
-      return authService.getToken()
-        .then(token => {
-          let config = {
-            headers: {
-              Accept: 'application/json',
-              'Content-Type': 'application/json',
-              Authorization: `Bearer ${token}`,
-            },
-          };
-          return $http.get(`${__API_URL__}/api/feed`, config);
-        })
+      // return authService.getToken()
+      //   .then(token => {
+      //     let config = {
+      //       headers: {
+      //         Accept: 'application/json',
+      //         'Content-Type': 'application/json',
+      //         Authorization: `Bearer ${token}`,
+      //       },
+      //     };
+      return $http.get(`${__API_URL__}/api/feed`)
         .then(res => {
           $log.log('#posts retrieved');
           service.posts = res.data;

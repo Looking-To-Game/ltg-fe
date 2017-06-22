@@ -27,13 +27,13 @@ module.exports = [
       this.supportedPlatforms = feedFilterService.supportedPlatforms;
 
 
-      this.fetchFeed = () => {
-        return feedFilterService.fetchFeed()
-        .then(posts => {
-          this.feed = posts;
-        })
-        .catch(err => $log.error(err));
-      };
+      // this.fetchFeed = () => {
+      //   return feedFilterService.fetchFeed()
+      //   .then(posts => {
+      //     this.feed = posts;
+      //   })
+      //   .catch(err => $log.error(err));
+      // };
 
       this.logout = function(){
         $log.log('#navbarCtrl.logout');
