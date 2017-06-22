@@ -1,0 +1,17 @@
+<section
+  ng-repeat="post in feedViewCtrl.feed"
+  post="post">
+  <!-- | fuzzySearch : homeCtrl.searchValue -->
+<div
+  class="post-card"
+  ng-click="feedViewCtrl.viewPost(post._id)">
+  <ul>
+    <li>Title: {{ post.title }}</li>
+    <li>Host: {{ post.host }}</li>
+    <li>Players: {{ post.groupSize }}</li>
+    <li>Game: {{ post.game }}</li>
+    <li>Platform: {{ post.platform }}</li>
+    <li>From {{ post.startTime }} until {{ post.endTime }}</li>
+  </ul>
+</div>
+</section>
