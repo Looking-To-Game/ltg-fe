@@ -23,6 +23,15 @@ $small-font: 'Squada One', cursive;
   font-size: 3vw;
 }
 //::::STYLES:::://
+
+.postcard-container{
+  background-color: rgba(012,012,012, 0.7);
+  width: 75vw;
+  margin-left: 12.5vw;
+  margin-right: 12.5vw;
+  margin-top: 5vh;
+}
+
 .postcard {
   color: $white;
   padding: $card-pad;
@@ -31,15 +40,6 @@ $small-font: 'Squada One', cursive;
   margin-top: 1.5vh;
   margin-bottom: 1.5vh;
   background: linear-gradient(115deg, $black, $black, $black 50%, transparent, transparent, transparent, transparent), url("../../../imgs/test-img.jpg") no-repeat center;
-}
-
-.postcard-container{
-  background-color: rgba(012,012,012, 0.7);
-  height: 110vh;
-  width: 75vw;
-  margin-left: 12.5vw;
-  margin-right: 12.5vw;
-  margin-top: 5vh;
 }
 
 .search-game{
