@@ -79,10 +79,9 @@ module.exports = [
 
     service.updatePost = (groupId, post) => {
       $log.debug('#postservice.updatePost');
-
       return authService.getToken()
         .then(token => {
-          let url = `${__API_URL__}/api/group/${groupId}`;
+          let url = `${__API_URL__}/api/group/${groupId}/update`;
           let config = {
             headers: {
               Accept: 'application/json',
@@ -90,12 +89,16 @@ module.exports = [
               Authorization: `Bearer ${token}`,
             },
           };
+          console.log(groupId, post);
           return $http.put(url, post, config);
         })
         .then(res => {
+          console.log('this is what we\'re getting back:', res.data);
           service.posts.forEach((ele, index) => {
             if(ele._id === res.data._id) service.posts[index] = res.data;
           });
+          service.post = res.data;// NOTE: just changed
+          console.log('this is the service.post:', service.post);
           return res.data;
         })
         .catch(err => {
