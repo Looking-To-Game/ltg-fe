@@ -1,11 +1,11 @@
 //::::VARS:::://
 
-$brand-primary: #b00f0a;
+$brand-primary: #910a05;
 $brand-secondary: #444;
 $brand-accent: #dc830c;
 $black: #000;
 $white: #fff;
-$base-pad: 1% 2%;
+$base-pad: 1% 5%;
 $btn-margin: .5%;
 $title-font: 'Nova Square', cursive;
 $small-font: 'Squada One', cursive;
@@ -14,25 +14,31 @@ $small-font: 'Squada One', cursive;
 @mixin txtBig {
   font-family: $title-font;
   color: $black;
+  font-size: 3vw;
+}
+
+@mixin txtSmall {
+  font-family: $small-font;
+  color: #fff;
   font-size: 2vw;
 }
-
 //::::STYLES:::://
 
-.page-tit {
-  @include txtBig;
-  text-align: center;
-  padding: $base-pad;
-}
-
-label {
+.eu-label {
+  @include txtSmall;
   display: block;
   margin: $base-pad;
 
 }
 
-input {
+.eu-input {
+  font-family: $small-font;
+  font-size: 2vw;
   display: inline-block;
   margin: $base-pad;
+  color: #black;
+}
 
+.update-button {
+  display: block;
 }

@@ -40,6 +40,7 @@ module.exports = [
 
       return authService.getToken()
       .then(token => {
+        console.log(token);
         let url = `${__API_URL__}/api/user`;
         let config = {
           headers: {

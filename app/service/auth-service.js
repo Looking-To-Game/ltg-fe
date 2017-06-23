@@ -15,7 +15,7 @@ module.exports = [
       $log.debug('#fe-authService.setToken()');
 
       if(!token) return $q.reject(new Error('No Token'));
-      $window.localStorage.setItem('token', token);
+      $window.localStorage.setItem('token', JSON.stringify(token));
       let tempToken = token;
 
       return $q.resolve(tempToken);
@@ -25,7 +25,7 @@ module.exports = [
       $log.debug('#fe-authService.getToken()');
 
       if(token) return $q.resolve(token);
-      token = $window.localStorage.getItem('token');
+      token = JSON.parse($window.localStorage.getItem('token'));
       if(token) return $q.resolve(token);
 
       return $q.reject(new Error('Token not found'));

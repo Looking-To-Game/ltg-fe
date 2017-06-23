@@ -1,13 +1,13 @@
-<a href="/#!/home">&larr; return to feed</a>
 <section>
   <div ng-if="!viewPostCtrl.showEditPost">
-    <h2> this is the post: {{ viewPostCtrl.post.title }}</h2>
-    <ul>
-      <li>Host: {{ viewPostCtrl.post.host }}</li>
-      <li>Players: {{ viewPostCtrl.post.groupSize }}</li>
-      <li>Game: {{ viewPostCtrl.post.game }}</li>
-      <li>Platform: {{ viewPostCtrl.post.platform }}</li>
-      <li>From {{ viewPostCtrl.post.startTime }} until {{ viewPostCtrl.post.endTime }}</li>
+    <h2 class="page-tit">{{ viewPostCtrl.post.title }}</h2>
+    <a href="/#!/home" class="return-btn">&larr; return to feed</a>
+    <ul class="gamer-tags">
+      <li class="vp-li">Host: {{ viewPostCtrl.post.host }}</li>
+      <li class="vp-li">Players: {{ viewPostCtrl.post.groupSize }}</li>
+      <li class="vp-li">Game: {{ viewPostCtrl.post.game }}</li>
+      <li class="vp-li">Platform: {{ viewPostCtrl.post.platform }}</li>
+      <li class="vp-li">From {{ viewPostCtrl.post.startTime }} until {{ viewPostCtrl.post.endTime }}</li>
     </ul>
   </div>
 </section>
