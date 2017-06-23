@@ -25,7 +25,7 @@ $small-font: 'Squada One', cursive;
 @mixin txtSmall {
   font-family: $small-font;
   color: #fff;
-  font-size: 1vw;
+  font-size: 2vw;
 }
 
 @mixin txtBig {
