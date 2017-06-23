@@ -31,9 +31,7 @@ module.exports = {
 
         this.viewPost = function(postId){
           return postService.viewPost(postId)
-          .then(post => {
-            // console.log('post id', post._id);
-            // console.log('post object', post);
+          .then(() => {
             $window.localStorage.removeItem('currentPost');
             $window.localStorage.setItem('currentPost', JSON.stringify(postService.post));
           })

@@ -6,7 +6,7 @@ $brand-accent: #dc830c;
 $black: #000;
 $white: #fff;
 $card-pad: .5% 1%;
-$card-margin: 1%;
+$card-margin: 20%;
 $title-font: 'Nova Square', cursive;
 $small-font: 'Squada One', cursive;
 
@@ -26,8 +26,19 @@ $small-font: 'Squada One', cursive;
 .postcard {
   color: $white;
   padding: $card-pad;
-  margin: $card-margin;
+  margin-left: $card-margin;
+  margin-right: $card-margin;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
   background: linear-gradient(115deg, $black, $black, $black 50%, transparent, transparent, transparent, transparent), url("../../../imgs/test-img.jpg") no-repeat center;
+}
+
+.postcard-container{
+  background-color: rgba(012,012,012, 0.7);
+  height: 100%;
+  width: 75vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 li {
