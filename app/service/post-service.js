@@ -42,15 +42,6 @@ module.exports = [
 
     service.readPosts = () => {
       $log.debug('#post service.readPosts');
-      // return authService.getToken()
-      //   .then(token => {
-      //     let config = {
-      //       headers: {
-      //         Accept: 'application/json',
-      //         'Content-Type': 'application/json',
-      //         Authorization: `Bearer ${token}`,
-      //       },
-      //     };
       return $http.get(`${__API_URL__}/api/feed`)
         .then(res => {
           $log.log('#posts retrieved');
@@ -114,15 +105,14 @@ module.exports = [
         .then(token => {
           let config = {
             headers: {
-              Accept: 'application/json',
               Authorization: `Bearer ${token}`,
             },
           };
-          return $http.delete(`${__API_URL__}/api/group/${groupId}`);
+          return $http.delete(`${__API_URL__}/api/group/${groupId}/delete`, config);
         })
         .then(() => {
           service.posts.forEach((ele, index) => {
-            if(ele._id === postId) service.posts.splice(index, 1);
+            if(ele._id === groupId) service.posts.splice(index, 1);
           });
         });
     };
