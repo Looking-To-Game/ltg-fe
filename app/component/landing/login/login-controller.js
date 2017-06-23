@@ -1,5 +1,7 @@
 'use strict';
 
+require('./_login.scss')
+
 module.exports = {
   template: require('./login.html'),
   controllerAs: 'loginCtrl',
