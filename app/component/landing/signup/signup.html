@@ -1,5 +1,5 @@
 <section class="signup">
-  <h2>{{ signupCtrl.title}}</h2>
+  <h2 class="page-tit">Sign Up</h2>
 
   <form class="signup-form"
     ng-submit="signupCtrl.signup(signupCtrl.user)"
@@ -25,7 +25,8 @@
       ng-model="signupCtrl.user.password"
       required>
 
-      <input type="submit" value="signup">
-
+      <!-- <input class="signup-btn" type="submit" value="signup"> -->
+      <button class="inner-login-btn" type="btn-std" ng-submit="navbarCtrl.hideButtons = true">sign up</button>
   </form>
+
 </section>

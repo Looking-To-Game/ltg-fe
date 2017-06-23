@@ -1,11 +1,12 @@
 //::::VARS:::://
 
-$brand-primary: #b00f0a;
+$brand-primary: #910a05;
 $brand-secondary: #444;
 $brand-accent: #dc830c;
 $black: #000;
 $white: #fff;
 $btn-pad: .5% 1%;
+$base-pad: 1% 2%;
 $btn-margin: .5%;
 $title-font: 'Nova Square', cursive;
 $small-font: 'Squada One', cursive;
@@ -25,7 +26,7 @@ $small-font: 'Squada One', cursive;
 @mixin txtSmall {
   font-family: $small-font;
   color: #fff;
-  font-size: 1vw;
+  font-size: 2vw;
 }
 
 @mixin txtBig {
@@ -38,8 +39,9 @@ $small-font: 'Squada One', cursive;
 body {
   @include txtSmall;
   background: $brand-secondary;
-  height: 100vw;
-  background: linear-gradient(115deg, $brand-secondary, $brand-secondary 40%, $black , transparent, transparent, transparent, transparent), url("../imgs/edit-profile.jpg") no-repeat center;
+  height: 100vh;
+  background: url("../imgs/edit-profile.jpg") no-repeat center center fixed;
+  // linear-gradient(115deg, $brand-secondary, $brand-secondary 40%, $black , transparent, transparent, transparent, transparent),
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 0px 10px 20px -5px rgba(0,0,0,.8);
@@ -49,7 +51,13 @@ body {
   @include txtBig;
   background-color: $brand-primary;
   padding: $btn-pad;
+}
 
+.page-tit {
+  @include txtBig;
+  text-align: center;
+  padding: $base-pad;
+  color: $brand-primary;
 }
 
 a, button{
@@ -59,4 +67,12 @@ a, button{
   &:hover{
     background: $brand-accent;
   }
+}
+
+.login-btn{
+  margin: 1% 46.25%;
+}
+
+.inner-login-btn{
+  margin: 10% 14%;
 }

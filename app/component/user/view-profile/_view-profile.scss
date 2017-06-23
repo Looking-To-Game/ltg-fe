@@ -1,0 +1,36 @@
+//::::VARS:::://
+
+$brand-primary: #910a05;
+$brand-secondary: #444;
+$brand-accent: #dc830c;
+$black: #000;
+$white: #fff;
+$base-pad: 1% 2%;
+$btn-margin: .5%;
+$title-font: 'Nova Square', cursive;
+$small-font: 'Squada One', cursive;
+
+//::::MIXINS:::://
+@mixin txtBig {
+  font-family: $title-font;
+  color: $black;
+  font-size: 3vw;
+}
+
+@mixin txtSmall {
+  font-family: $small-font;
+  color: #fff;
+  font-size: 2vw;
+}
+//::::STYLES:::://
+
+.vp-names {
+  @include txtSmall;
+  display: block;
+  margin: 2% 5%;
+}
+
+.game-names {
+  @include txtSmall;
+  color: $brand-accent;
+}

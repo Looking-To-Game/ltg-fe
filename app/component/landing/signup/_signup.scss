@@ -1,0 +1,26 @@
+//::::VARS:::://
+
+$brand-primary: #910a05;
+$brand-secondary: #444;
+$brand-accent: #dc830c;
+$black: #000;
+$white: #fff;
+$btn-pad: .5% 1%;
+$btn-margin: .5%;
+$title-font: 'Nova Square', cursive;
+$small-font: 'Squada One', cursive;
+
+.signup-form{
+  margin: 10% 46% 1% 46%;
+}
+
+.signup-btn{
+  // width: 10%;
+  padding: $btn-pad;
+  background: $brand-primary;
+  border: none;
+  margin: $btn-margin;
+  text-decoration: none;
+  color: #fff;
+  transition: 500ms all;
+}
