@@ -7,7 +7,8 @@
       <li class="vp-li">Players: {{ viewPostCtrl.post.groupSize }}</li>
       <li class="vp-li">Game: {{ viewPostCtrl.post.game }}</li>
       <li class="vp-li">Platform: {{ viewPostCtrl.post.platform }}</li>
-      <li class="vp-li">From {{ viewPostCtrl.post.startTime }} until {{ viewPostCtrl.post.endTime }}</li>
+      <li class="vp-li">Details: {{ viewPostCtrl.post.description }}</li>
+      <li class="vp-li">From {{ viewPostCtrl.post.startTime | date : medium }} until {{ viewPostCtrl.post.endTime | date : medium }}</li>
     </ul>
   </div>
 </section>
