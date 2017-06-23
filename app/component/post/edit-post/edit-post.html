@@ -75,7 +75,7 @@
         ng-model="editPostCtrl.editedPost.endTime">
     </fieldset>
     <button type="submit" ng-if="editPostCtrl.showEditPost"
-    ng-click="editPostCtrl.showEditPost = false"
-    ng-click="editPostCtrl.updatePost()">submit</button>
+    ng-click="editPostCtrl.showEditPost = false; editPostCtrl.updatePost()">
+    submit</button>
   </form>
 </section>

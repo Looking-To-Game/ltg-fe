@@ -34,10 +34,15 @@ $small-font: 'Squada One', cursive;
   font-size: 3vw;
 }
 //::::STYLES:::://
+
 body {
   @include txtSmall;
   background: $brand-secondary;
-  // background-image: url('');
+  height: 100vw;
+  background: linear-gradient(115deg, $brand-secondary, $brand-secondary 40%, $black , transparent, transparent, transparent, transparent), url("../imgs/edit-profile.jpg") no-repeat center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 10px 20px -5px rgba(0,0,0,.8);
 }
 
 .title {
