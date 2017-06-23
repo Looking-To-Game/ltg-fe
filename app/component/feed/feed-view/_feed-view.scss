@@ -1,0 +1,46 @@
+//::::VARS:::://
+
+$brand-primary: #b00f0a;
+$brand-secondary: #444;
+$brand-accent: #dc830c;
+$black: #000;
+$white: #fff;
+$card-pad: .5% 1%;
+$card-margin: 1%;
+$title-font: 'Nova Square', cursive;
+$small-font: 'Squada One', cursive;
+
+//::::MIXINS:::://
+@mixin txtSmall {
+  font-family: $small-font;
+  color: #fff;
+  font-size: 1vw;
+}
+
+@mixin txtBig {
+  font-family: $title-font;
+  color: $brand-accent;
+  font-size: 3vw;
+}
+//::::STYLES:::://
+.postcard {
+  color: $white;
+  padding: $card-pad;
+  margin: $card-margin;
+  background: linear-gradient(115deg, $black, $black, $black 50%, transparent, transparent, transparent, transparent), url("../../../imgs/test-img.jpg") no-repeat center;
+}
+
+li {
+  margin: .25vw 0;
+  @include txtSmall;
+}
+
+.card-title {
+  @include txtBig;
+  width: 50%;
+  color: $brand-primary;
+}
+
+.game, .platform, .card-input {
+  color: $brand-accent;
+}
