@@ -10,7 +10,8 @@ module.exports = {
     '$log',
     '$window',
     '$location',
-    'postService', function($log, $window, $location, postService){
+    'postService',
+    function($log, $window, $location, postService){
       this.$onInit = () => {
         $log.debug('#editPostCtrl');
 
@@ -20,21 +21,29 @@ module.exports = {
         };
 
         this.showEditPost = true;
+
         this.editedPost = JSON.parse($window.localStorage.currentPost);
-        console.log('THE EDITED POST MOTHA FUCKA', this.editedPost);
 
         this.updatePost = () => {
-          postService.updatePost(this.post._id, this.post)
+          return postService.updatePost(this.editedPost._id, this.editedPost)
             .then(post => {
-              $window.localStorage.removeItem('currentPost');
-              $window.localStorage.setItem('currentPost', JSON.stringify(post.data));
+              // $window.localStorage.removeItem('currentPost');
+              this.editedPost = $window.localStorage.currentPost = JSON.stringify(postService.post);
               () => $log.log('Edit successful'), err => $log.error(err);
             }
           )
           .then(
-            () => $location.url('/post')
+            () => {
+              // this.editedPost = JSON.parse($window.localStorage.currentPost);
+              $location.url('/post');
+            }
           );
         };
       };
+
+
+
+
+
     }],
 };
