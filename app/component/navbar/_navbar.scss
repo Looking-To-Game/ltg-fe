@@ -17,11 +17,25 @@ $small-font: 'Squada One', cursive;
 //::::STYLES:::://
 .navbar{
   background: $brand-secondary;
+  top: 0;
+
+}
+
+.title-block{
+  margin-right: 0;
+  display: inline-block;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  background: $brand-primary;
+  color: $brand-accent;
 }
 
 .navbar-btn {
   @include txtBtn;
-  width: 33.33%;
+  // width: 33.33%;
+  width: 25.85%;
   margin: 0;
   padding: 1vw 0;
   text-align: center;
@@ -34,4 +48,5 @@ $small-font: 'Squada One', cursive;
     background: $brand-accent;
     transform: scale(.9);
   }
+  z-index: 1;
 }
