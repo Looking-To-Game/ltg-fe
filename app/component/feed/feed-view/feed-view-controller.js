@@ -1,5 +1,7 @@
 'use strict';
 
+require('./_feed-view.scss');
+
 module.exports = {
   template: require('./feed-view.html'),
   controllerAs: 'feedViewCtrl',

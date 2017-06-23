@@ -2,16 +2,18 @@
   ng-repeat="post in feedViewCtrl.feed"
   post="post">
   <!-- | fuzzySearch : homeCtrl.searchValue -->
+
 <div
-  class="post-card"
+  class="postcard"
   ng-click="feedViewCtrl.viewPost(post._id)">
   <ul>
-    <li>Title: {{ post.title }}</li>
-    <li>Host: {{ post.host }}</li>
-    <li>Players: {{ post.groupSize }}</li>
-    <li>Game: {{ post.game }}</li>
-    <li>Platform: {{ post.platform }}</li>
-    <li>From {{ post.startTime }} until {{ post.endTime }}</li>
+    <li class="card-title">{{ post.title }}</li>
+    <li class="host">Host: <span class="card-input">{{ post.host}}</span></li>
+    <li class="players">Players: <span class="card-input">{{ post.groupSize }}</span></li>
+    <li class="game">Game: </li>
+    <li>Playing <span class="card-input">{{ post.game }}</span> on <span class="card-input">{{ post.platform }}</span></li>
+    <li class="platform">Platform: </li>
+    <li class="time">From <span class="card-input">{{ post.startTime }}</span> until <span class="card-input">{{ post.endTime }}</span></li>
   </ul>
 </div>
 </section>
