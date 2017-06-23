@@ -1,0 +1,47 @@
+//::::VARS:::://
+
+$brand-primary: #b00f0a;
+$brand-secondary: #444;
+$brand-accent: #dc830c;
+$black: #000;
+$white: #fff;
+$base-pad: 1% 2%;
+$btn-margin: .5%;
+$title-font: 'Nova Square', cursive;
+$small-font: 'Squada One', cursive;
+
+//::::MIXINS:::://
+@mixin txtBig {
+  font-family: $title-font;
+  color: $black;
+  font-size: 2vw;
+}
+
+@mixin txtSmall {
+  font-family: $small-font;
+  color: #fff;
+  font-size: 2vw;
+}
+
+//::::STYLES:::://
+
+.page-tit {
+  @include txtBig;
+  text-align: center;
+  padding: $base-pad;
+}
+
+.postselect {
+  margin-left: 1%;
+}
+
+.cpost-fields {
+  @include txtSmall;
+
+  display: block;
+  margin: 5vw 0;
+}
+
+.cpost-label, .cpost-input {
+  display: inline-block;
+}

@@ -14,9 +14,14 @@ $small-font: 'Squada One', cursive;
 @mixin txtBig {
   font-family: $title-font;
   color: $black;
-  font-size: 2vw;
+  font-size: 3vw;
 }
 
+@mixin txtSmall {
+  font-family: $small-font;
+  color: #fff;
+  font-size: 2vw;
+}
 //::::STYLES:::://
 
 .page-tit {
@@ -25,13 +30,15 @@ $small-font: 'Squada One', cursive;
   padding: $base-pad;
 }
 
-label {
+.eu-label {
+  @include txtSmall;
   display: block;
   margin: $base-pad;
 
 }
 
-input {
+.eu-input {
+  @include txtSmall;
   display: inline-block;
   margin: $base-pad;
 
