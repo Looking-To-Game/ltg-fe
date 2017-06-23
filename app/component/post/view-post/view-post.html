@@ -1,0 +1,13 @@
+<a href="/#!/home">&larr; return to feed</a>
+<section>
+  <div ng-if="!viewPostCtrl.showEditPost">
+    <h2> this is the post: {{ viewPostCtrl.post.title }}</h2>
+    <ul>
+      <li>Host: {{ viewPostCtrl.post.host }}</li>
+      <li>Players: {{ viewPostCtrl.post.groupSize }}</li>
+      <li>Game: {{ viewPostCtrl.post.game }}</li>
+      <li>Platform: {{ viewPostCtrl.post.platform }}</li>
+      <li>From {{ viewPostCtrl.post.startTime }} until {{ viewPostCtrl.post.endTime }}</li>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,58 @@
+<section>
+  <h1 class="page-tit">Edit Profile</h1>
+  <form
+  ng-submit="editUserCtrl.updateUser()"
+    >
+    <label for="username" class="eu-label">Username:</label>
+    <input
+      class="eu-input"
+      name="username"
+      type="text"
+      ng-minlength="4"
+      ng-model="editUserCtrl.user.username">
+
+    <label for="email" class="eu-label">Email:</label>
+    <input
+      class="eu-input"
+      name="email"
+      type="text"
+      ng-model="editUserCtrl.user.email">
+
+    <label for="xbl" class="eu-label">Xbox Live:</label>
+    <input
+      class="eu-input"
+      name="xbl"
+      type="text"
+      ng-model="editUserCtrl.user.xbl">
+
+    <label for="psn" class="eu-label">PlayStation Network:</label>
+    <input
+      class="eu-input"
+      name="psn"
+      type="text"
+      ng-model="editUserCtrl.user.psn">
+
+    <label for="steam" class="eu-label">Steam:</label>
+    <input
+      class="eu-input"
+      name="steam"
+      type="text"
+      ng-model="editUserCtrl.user.steam">
+
+    <label for="bn" class="eu-label">BattleNet:</label>
+    <input
+      class="eu-input"
+      name="bn"
+      type="text"
+      ng-model="editUserCtrl.user.bn">
+
+    <label for="lol" class="eu-label">League of Legends:</label>
+    <input
+      class="eu-input"
+      name="lol"
+      type="text"
+      ng-model="editUserCtrl.user.lol">
+
+  </form>
+  <button type="submit">Update Info</button>
+</section>

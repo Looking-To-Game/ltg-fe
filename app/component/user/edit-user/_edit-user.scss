@@ -1,0 +1,45 @@
+//::::VARS:::://
+
+$brand-primary: #b00f0a;
+$brand-secondary: #444;
+$brand-accent: #dc830c;
+$black: #000;
+$white: #fff;
+$base-pad: 1% 5%;
+$btn-margin: .5%;
+$title-font: 'Nova Square', cursive;
+$small-font: 'Squada One', cursive;
+
+//::::MIXINS:::://
+@mixin txtBig {
+  font-family: $title-font;
+  color: $black;
+  font-size: 3vw;
+}
+
+@mixin txtSmall {
+  font-family: $small-font;
+  color: #fff;
+  font-size: 2vw;
+}
+//::::STYLES:::://
+
+.page-tit {
+  @include txtBig;
+  text-align: center;
+  padding: $base-pad;
+}
+
+.eu-label {
+  @include txtSmall;
+  display: block;
+  margin: $base-pad;
+
+}
+
+.eu-input {
+  @include txtSmall;
+  display: inline-block;
+  margin: $base-pad;
+
+}

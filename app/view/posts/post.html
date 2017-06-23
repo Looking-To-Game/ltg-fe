@@ -1,0 +1,20 @@
+<section>
+  <div class="postview-container"
+    ng-if="postCtrl.createPost">
+    <create-post-controller></create-post-controller>
+  </div>
+
+  <div class="postview-container"
+    ng-if="postCtrl.viewPost">
+    <view-post-controller></view-post-controller>
+    <button
+    ng-click="postCtrl.showEdit()">edit post</button>
+  </div>
+
+  <div class="postview-container"
+    ng-if="postCtrl.editPost">
+    <edit-post-controller></edit-post-controller>
+    <button
+    ng-click="postCtrl.showView()">return to post</button>
+  </div>
+</section>

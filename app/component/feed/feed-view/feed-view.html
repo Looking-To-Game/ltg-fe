@@ -1,0 +1,28 @@
+<section class="postcard-container">
+
+  <!-- <h3 class="search-game">Search for a game!</h3> -->
+  <input
+  type="text"
+  class="search-game"
+  name="search"
+  placeholder="Search for a game!"
+  ng-model="feedViewCtrl.searchValue">
+
+  <a id="create-post" href="/#!/post#create">Create Post</a>
+  <section
+    ng-repeat="post in feedViewCtrl.feed | fuzzySearch : feedViewCtrl.searchValue"
+    post="post"
+    currentGame="searchValue">
+        <div
+          class="postcard"
+          ng-click="feedViewCtrl.viewPost(post._id)">
+          <ul>
+            <li class="card-title">{{ post.title }}</li>
+            <li class="host">Host: <span class="card-input">{{ post.host}}</span></li>
+            <li class="players">Players: <span class="card-input">{{ post.groupSize }}</span></li>
+            <li>Playing <span class="card-input">{{ post.game }}</span> on <span class="card-input">{{ post.platform }}</span></li>
+            <li class="time">From <span class="card-input">{{ post.startTime | date : medium }}</span> until <span class="card-input">{{ post.endTime | date : medium }}</span></li>
+          </ul>
+        </div>
+  </section>
+</section>
