@@ -23,11 +23,6 @@ $small-font: 'Squada One', cursive;
   font-size: 2vw;
 }
 //::::STYLES:::://
-.page-tit {
-  @include txtBig;
-  text-align: center;
-  padding: $base-pad;
-}
 
 .vp-names {
   @include txtSmall;

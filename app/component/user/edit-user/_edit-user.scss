@@ -24,12 +24,6 @@ $small-font: 'Squada One', cursive;
 }
 //::::STYLES:::://
 
-.page-tit {
-  @include txtBig;
-  text-align: center;
-  padding: $base-pad;
-}
-
 .eu-label {
   @include txtSmall;
   display: block;
@@ -38,8 +32,9 @@ $small-font: 'Squada One', cursive;
 }
 
 .eu-input {
-  @include txtSmall;
+  font-family: $small-font;
+  font-size: 2vw;
   display: inline-block;
   margin: $base-pad;
-
+  color: #black;
 }

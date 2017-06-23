@@ -6,6 +6,7 @@ $brand-accent: #dc830c;
 $black: #000;
 $white: #fff;
 $btn-pad: .5% 1%;
+$base-pad: 1% 2%;
 $btn-margin: .5%;
 $title-font: 'Nova Square', cursive;
 $small-font: 'Squada One', cursive;
@@ -52,6 +53,13 @@ body {
   padding: $btn-pad;
 }
 
+.page-tit {
+  @include txtBig;
+  text-align: center;
+  padding: $base-pad;
+  color: $brand-primary;
+}
+
 a, button{
   @include btns;
   @include txtSmall;
@@ -59,4 +67,12 @@ a, button{
   &:hover{
     background: $brand-accent;
   }
+}
+
+.login-btn{
+  margin: 1% 46.25%;
+}
+
+.inner-login-btn{
+  margin: 10% 14%;
 }

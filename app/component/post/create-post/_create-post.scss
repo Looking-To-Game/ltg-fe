@@ -25,12 +25,6 @@ $small-font: 'Squada One', cursive;
 
 //::::STYLES:::://
 
-.page-tit {
-  @include txtBig;
-  text-align: center;
-  padding: $base-pad;
-}
-
 .postselect {
   margin-left: 1%;
 }

@@ -2,7 +2,7 @@
   <div class="join-container" ng-if="landingCtrl.showSignup">
     <div class="join-inner">
       <signup-controller></signup-controller>
-      <p class="login-btn">already a mamber?</p>
+      <p class="login-btn">already a member?</p>
       <a href="/#!/login" ng-click="landingCtrl.showSignup=false" class="login-btn">Login</a>
     </div>
   </div>
@@ -10,7 +10,7 @@
   <div class="join-container" ng-if="!landingCtrl.showSignup">
     <div class="join-inner">
       <login-controller></login-controller>
-      <p class="login-btn">New to LtG?</p>
+      <p class="login-btn">new user?</p>
       <a href="/#!/signup" ng-click="landingCtrl.showSignup=true" class="login-btn">Signup</a>
     </div>
   </div>
