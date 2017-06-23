@@ -1,5 +1,7 @@
 'use strict';
 
+require('./_view-profile.scss');
+
 module.exports = {
   template: require('./view-profile.html'),
   bindings: {
