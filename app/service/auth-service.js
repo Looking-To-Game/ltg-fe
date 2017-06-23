@@ -25,7 +25,7 @@ module.exports = [
       $log.debug('#fe-authService.getToken()');
 
       if(token) return $q.resolve(token);
-      token = $window.localStorage.getItem('token');
+      token = JSON.parse($window.localStorage.getItem('token'));
       if(token) return $q.resolve(token);
 
       return $q.reject(new Error('Token not found'));

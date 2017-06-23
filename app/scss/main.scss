@@ -47,6 +47,10 @@ body {
   box-shadow: 0px 10px 20px -5px rgba(0,0,0,.8);
 }
 
+section {
+  margin-top: 10%;
+}
+
 .title {
   @include txtBig;
   background-color: $brand-primary;

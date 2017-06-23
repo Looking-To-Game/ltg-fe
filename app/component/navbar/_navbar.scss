@@ -18,7 +18,9 @@ $small-font: 'Squada One', cursive;
 .navbar{
   background: $brand-secondary;
   top: 0;
-
+  width: 100%;
+  position: fixed;
+  margin-top: 0%;
 }
 
 .title-block{

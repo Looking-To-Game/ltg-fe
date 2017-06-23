@@ -1,6 +1,6 @@
 'use strict';
 
-// require('./_view-post-controller.scss')
+require('./_view-post.scss');
 
 module.exports = {
   template: require('./view-post.html'),
@@ -17,7 +17,7 @@ module.exports = {
 
         this.post = JSON.parse($window.localStorage.currentPost);
         this.showViewPost = true;
-        
+
       };
     }],
   bindings: {
