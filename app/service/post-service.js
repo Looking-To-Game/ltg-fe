@@ -42,15 +42,6 @@ module.exports = [
 
     service.readPosts = () => {
       $log.debug('#post service.readPosts');
-      // return authService.getToken()
-      //   .then(token => {
-      //     let config = {
-      //       headers: {
-      //         Accept: 'application/json',
-      //         'Content-Type': 'application/json',
-      //         Authorization: `Bearer ${token}`,
-      //       },
-      //     };
       return $http.get(`${__API_URL__}/api/feed`)
         .then(res => {
           $log.log('#posts retrieved');
@@ -79,10 +70,9 @@ module.exports = [
 
     service.updatePost = (groupId, post) => {
       $log.debug('#postservice.updatePost');
-
       return authService.getToken()
         .then(token => {
-          let url = `${__API_URL__}/api/group/${groupId}`;
+          let url = `${__API_URL__}/api/group/${groupId}/update`;
           let config = {
             headers: {
               Accept: 'application/json',
@@ -90,12 +80,16 @@ module.exports = [
               Authorization: `Bearer ${token}`,
             },
           };
+          console.log(groupId, post);
           return $http.put(url, post, config);
         })
         .then(res => {
+          console.log('this is what we\'re getting back:', res.data);
           service.posts.forEach((ele, index) => {
             if(ele._id === res.data._id) service.posts[index] = res.data;
           });
+          service.post = res.data;// NOTE: just changed
+          console.log('this is the service.post:', service.post);
           return res.data;
         })
         .catch(err => {
@@ -111,15 +105,14 @@ module.exports = [
         .then(token => {
           let config = {
             headers: {
-              Accept: 'application/json',
               Authorization: `Bearer ${token}`,
             },
           };
-          return $http.delete(`${__API_URL__}/api/group/${groupId}`);
+          return $http.delete(`${__API_URL__}/api/group/${groupId}/delete`, config);
         })
         .then(() => {
           service.posts.forEach((ele, index) => {
-            if(ele._id === postId) service.posts.splice(index, 1);
+            if(ele._id === groupId) service.posts.splice(index, 1);
           });
         });
     };

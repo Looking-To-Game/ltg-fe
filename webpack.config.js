@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const HTMLPlugin = require('html-webpack-plugin');
 // const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-require('clean-webpack-plugin');
+// require('clean-webpack-plugin');
 
 const production = process.env.NODE_ENV === 'production';
 
@@ -40,8 +40,15 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+          'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
+          'image-webpack-loader?bypassOnDebug&optimizationLevel=7&interlaced=false',
+        ],
+      },
+      {
         test:/\.js$/,
-        exclude: /node-modules/,
+        // exclude: /node-modules/,
         use: ['babel-loader'],
       },
       {

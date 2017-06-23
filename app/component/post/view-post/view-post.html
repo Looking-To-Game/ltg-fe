@@ -1,19 +1,13 @@
+<a href="/#!/home">&larr; return to feed</a>
 <section>
   <div ng-if="!viewPostCtrl.showEditPost">
-    <h2> this is the post: {{ feedpost.title }}</h2>
-    <span>Host: {{viewPostCtrl.post.username}}</span>
-    <span>Players: {{viewPostCtrl.post.groupSize}}</span>
-    <span>Game: {{viewPostCtrl.post.game}}</span>
-    <span>Platform: {{viewPostCtrl.post.platform}}</span>
-    <span>From {{viewPostCtrl.post.startTime}} until {{viewPostCtrl.post.endTime}}</span>
+    <h2> this is the post: {{ viewPostCtrl.post.title }}</h2>
+    <ul>
+      <li>Host: {{ viewPostCtrl.post.host }}</li>
+      <li>Players: {{ viewPostCtrl.post.groupSize }}</li>
+      <li>Game: {{ viewPostCtrl.post.game }}</li>
+      <li>Platform: {{ viewPostCtrl.post.platform }}</li>
+      <li>From {{ viewPostCtrl.post.startTime }} until {{ viewPostCtrl.post.endTime }}</li>
+    </ul>
   </div>
-
-  <edit-post-controller ng-if="viewPostCtrl.showEditPost"
-    post="viewPostCtrl.post">
-  </edit-post-controller>
-  <a href="/#!/post#edit"
-    ng-if="!viewPostCtrl.showEditPost"
-    ng-click="viewPostCtrl.showEditPost = true">
-    Edit
-  </a>
 </section>

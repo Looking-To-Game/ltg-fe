@@ -2,20 +2,19 @@
   <div class="postview-container"
     ng-if="postCtrl.createPost">
     <create-post-controller></create-post-controller>
-    <div class="postview-inner">
-    </div>
   </div>
 
   <div class="postview-container"
     ng-if="postCtrl.viewPost">
-    <div class="postview-inner">
-      <view-post-controller></view-post-controller>
-    </div>
+    <view-post-controller></view-post-controller>
+    <button
+    ng-click="postCtrl.showEdit()">edit post</button>
+  </div>
 
   <div class="postview-container"
     ng-if="postCtrl.editPost">
-    <div class="postview-inner">
-      <edit-post-controller></edit-post-controller>
-    </div>
+    <edit-post-controller></edit-post-controller>
+    <button
+    ng-click="postCtrl.showView()">return to post</button>
   </div>
 </section>

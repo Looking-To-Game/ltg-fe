@@ -5,7 +5,58 @@ $brand-secondary: #444;
 $brand-accent: #dc830c;
 $black: #000;
 $white: #fff;
+$btn-pad: .5% 1%;
+$btn-margin: .5%;
+$title-font: 'Nova Square', cursive;
+$small-font: 'Squada One', cursive;
 
 //::::MIXINS:::://
+@mixin btns{
+  // width: 10%;
+  padding: $btn-pad;
+  background: $brand-primary;
+  border: none;
+  margin: $btn-margin;
+  text-decoration: none;
+  color: #fff;
+  transition: 500ms all;
+}
 
+@mixin txtSmall {
+  font-family: $small-font;
+  color: #fff;
+  font-size: 2vw;
+}
+
+@mixin txtBig {
+  font-family: $title-font;
+  color: $brand-accent;
+  font-size: 3vw;
+}
 //::::STYLES:::://
+
+body {
+  @include txtSmall;
+  background: $brand-secondary;
+  height: 100vw;
+  background: linear-gradient(115deg, $brand-secondary, $brand-secondary 40%, $black , transparent, transparent, transparent, transparent), url("../imgs/edit-profile.jpg") no-repeat center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 10px 20px -5px rgba(0,0,0,.8);
+}
+
+.title {
+  @include txtBig;
+  background-color: $brand-primary;
+  padding: $btn-pad;
+
+}
+
+a, button{
+  @include btns;
+  @include txtSmall;
+
+  &:hover{
+    background: $brand-accent;
+  }
+}
