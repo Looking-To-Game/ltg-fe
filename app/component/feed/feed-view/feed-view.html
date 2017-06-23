@@ -1,6 +1,6 @@
 <section class="postcard-container">
 
-  <!-- <h3 class="search-game">Search for a game!</h3> -->  
+  <!-- <h3 class="search-game">Search for a game!</h3> -->
   <input
   type="text"
   class="search-game"
@@ -10,11 +10,11 @@
 
   <a id="create-post" href="/#!/post#create">Create Post</a>
   <section
+    class="postcard"
     ng-repeat="post in feedViewCtrl.feed | fuzzySearch : feedViewCtrl.searchValue"
     post="post"
     currentGame="searchValue">
         <div
-          class="postcard"
           ng-click="feedViewCtrl.viewPost(post._id)">
           <ul>
             <li class="card-title">{{ post.title }}</li>
