@@ -15,6 +15,14 @@ Looking to game is a full stack JavaScript application (app) with a front end an
 The back end can be found at the following GitHub location:
 https://github.com/Looking-To-Game/ltg-be
 
+## Deployed Application
+
+The most stable version of the front end is called production. The production front end has been deployed to Heroku at the following location:
+
+https://ltg-fe-production.herokuapp.com
+
+Please be patient with loading, it can take a minute Heroku to spin up the dynos. [Heroku Dynos](https://www.heroku.com/dynos). [Heroku Status](https://status.heroku.com).
+
 ## Notes
 1. Run `npm i`
 1. Run the back end server and database.
