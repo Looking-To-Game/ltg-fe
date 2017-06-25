@@ -21,7 +21,7 @@ The most stable version of the front end is called production. The production fr
 
 https://ltg-fe-production.herokuapp.com
 
-Please be patient with loading, it can take a minute Heroku to spin up the dynos. [Heroku Dynos](https://www.heroku.com/dynos). [Heroku Status](https://status.heroku.com).
+Please be patient with loading, it can take a minute for Heroku to spin up the dynos. [Heroku Dynos](https://www.heroku.com/dynos). [Heroku Status](https://status.heroku.com).
 
 ## Notes
 1. Run `npm i`
